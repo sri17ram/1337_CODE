@@ -2,7 +2,9 @@ import math
 
 int2rom = {
     1:"I",
+    4:"IV"
     5:"V",
+    9:"IX"
     10:"X",
     50:"L"
 }
@@ -35,4 +37,18 @@ for num in range(1, 40):
         print("{} -> {}".format(num, roman))
 """
 
+for num in range (1, 40):
+    final
+    if (num >= 10):
+        pc_10 = math.floor(num/10)
+        num = num - pc_10 *10
+        roman = str(int2rom[10])*pc_10
+    if (6 <= num <= 8):
+        pc_5 = math.floor(num/5)
+        num = num - 5
+        roman = roman + str(int2rom[5])
+    if (num == 4):
+        pc_4 = 1
+    if (num > 0):
+        pc_1 = num
 
