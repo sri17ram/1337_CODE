@@ -1,4 +1,5 @@
 import logging
+import os
 
 rom2int = {
     "I":1,
@@ -37,10 +38,29 @@ def romanToInt(roman_input):
         elif (value == "M" or value == "D") and index != 0 and roman_input[index-1] == "C":
             continue
         else:
-            print(index, value, rom2int[value])
+            # print(index, value, rom2int[value])
             sum = sum + rom2int[value]
 
-    print("SUM => {}".format(sum))
+    # print("SUM => {}".format(sum))
     return sum
 
-print (romanToInt("MCMXCIV"))
+# print (romanToInt("MCMXCIV"))
+
+print ("Run Time Path: {}".format(os.getcwd()))
+try:
+    with open("input.txt","r") as inp_fh:
+        for index,value in enumerate(inp_fh.readlines()):
+            # print (index, value.split("="))
+            numeral = value.split("=")[0]
+            numeral = numeral.rstrip()
+
+            roman = value.split("=")[1]
+            roman = roman.rstrip()
+
+            scriptOutput = romanToInt(roman)
+
+            if (int(numeral) != int(scriptOutput)):
+                print(numeral, roman, scriptOutput)
+
+except:
+    print("Error!! In opening a file")
