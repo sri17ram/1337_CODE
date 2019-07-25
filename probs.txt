@@ -1,0 +1,210 @@
+Given two binary strings, return their sum (also a binary string).
+
+The input strings are both non-empty and contains only characters 1 or 0.
+
+Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+Example 2:
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+---------
+A B = S C
+---------
+0 0 = 0 0
+0 1 = 1 0
+1 0 = 1 0
+1 1 = 1 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+Note:
+
+The number of elements initialized in nums1 and nums2 are m and n respectively.
+You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
+Example:
+
+Input:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+Output: [1,2,2,3,5,6]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Given two strings s and t, determine if they are both one edit distance apart.
+
+Note:
+
+There are 3 possiblities to satisify one edit distance apart:
+
+Insert a character into s to get t
+Delete a character from s to get t
+Replace a character of s to get t
+Example 1:
+
+Input: s = "ab", t = "acb"
+Output: true
+Explanation: We can insert 'c' into s to get t.
+
+Example 2:
+
+Input: s = "cab", t = "ad"
+Output: false
+Explanation: We cannot get t from s by only one step.
+Example 3:
+
+Input: s = "1203", t = "1213"
+Output: true
+Explanation: We can replace '0' with '1' to get t.
+
+class Solution:
+    def isOneEditDistance(self, s: str, t: str) -> bool:
+
+************************************************************************************************************************
+
+Validate IP Address
+  Go to Discuss
+Write a function to check whether an input string is a valid IPv4 address or IPv6 address or neither.
+
+IPv4 addresses are canonically represented in dot-decimal notation, which consists of four decimal numbers, each ranging from 0 to 255, separated by dots ("."),
+e.g.,172.16.254.1;
+
+Besides, leading zeros in the IPv4 is invalid. For example, the address 172.16.254.01 is invalid.
+
+IPv6 addresses are represented as
+
+eight groups
+
+ of four hexadecimal digits, each group representing 16 bits.
+
+The groups are separated by colons (":"). For example,
+the address
+2001:0db8:85a3:0000:0000:8a2e:0370:7334 is a valid one.
+Also, we could omit some leading zeros among four hexadecimal digits and some low-case characters in the address to upper-case ones, so
+2001:db8:85a3:0:0:8A2E:0370:7334 is also a valid IPv6 address(Omit leading zeros and using upper cases).
+
+However, we don't replace a consecutive group of zero value with a single empty group using two consecutive colons (::) to pursue simplicity.
+For example, 2001:0db8:85a3::8A2E:0370:7334 is an invalid IPv6 address.
+
+Besides, extra leading zeros in the IPv6 is also invalid. For example, the address
+02001:0db8:85a3:0000:0000:8a2e:0370:7334 is invalid.
+
+Note: You may assume there is no extra space or special characters in the input string.
+
+Example 1:
+Input: "172.16.254.1"
+
+Output: "IPv4"
+
+Explanation: This is a valid IPv4 address, return "IPv4".
+
+
+Example 2:
+Input: "2001:0db8:85a3:0:0:8A2E:0370:7334"
+
+Output: "IPv6"
+
+Explanation: This is a valid IPv6 address, return "IPv6".
+
+Example 3:
+
+Input: "256.256.256.256"
+
+Output: "Neither"
+
+Explanation: This is neither a IPv4 address nor a IPv6 address.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**********************************
+
+
+Valid Palindrome
+  Go to Discuss
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+Note: For the purpose of this problem, we define empty string as valid palindrome.
+
+Example 1:
+
+Input: "A man, a plan, a canal: Panama"
+Output: true
+Example 2:
+
+Input: "race a car"
+Output: false
+Python3
+1
+class Solution:
+2
+    def isPalindrome(self, s: str) -> bool:
+3

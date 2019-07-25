@@ -16,6 +16,8 @@ def romanToInt(roman_input):
     sum = 0
 
     for index, value in enumerate(roman_input):
+
+
         if value == "I" and index != (len(roman_input)-1) and (roman_input[index+1] == "V" or roman_input[index+1] == "X"):
             if roman_input[index+1] == "V":
                 sum = sum + 4
@@ -23,6 +25,8 @@ def romanToInt(roman_input):
                 sum = sum + 9
         elif (value == "V" or value == "X") and index != 0 and roman_input[index-1] == "I":
             continue
+
+
         elif value == "X" and index != (len(roman_input)-1) and (roman_input[index+1] == "L" or roman_input[index+1] == "C"):
             if roman_input[index+1] == "L":
                 sum = sum + 40
@@ -30,6 +34,8 @@ def romanToInt(roman_input):
                 sum = sum + 90
         elif (value == "L" or value == "C") and index != 0 and roman_input[index-1] == "X":
             continue
+
+
         elif value == "C" and index != (len(roman_input)-1) and (roman_input[index+1] == "D" or roman_input[index+1] == "M"):
             if roman_input[index+1] == "D":
                 sum = sum + 400
@@ -37,6 +43,8 @@ def romanToInt(roman_input):
                 sum = sum + 900
         elif (value == "M" or value == "D") and index != 0 and roman_input[index-1] == "C":
             continue
+
+
         else:
             # print(index, value, rom2int[value])
             sum = sum + rom2int[value]
